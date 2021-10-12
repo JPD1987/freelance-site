@@ -1,17 +1,29 @@
+html {
+    background-color: gray;
+    color: black;
+    text-shadow: 4px 4px 10px yellow;
+}
+
 h1 {
     background-color: black;
     width: 18%;
-    border: .3em solid goldenrod;
     border-radius: 1em;
+    border: .3em ridge goldenrod;
     text-align: center;
-    color: goldenrod;
-    opacity: 0.6;
-    border-style: ridge;
+    opacity: 0.5;
     padding-top: .2em;
+    text-shadow: 2px 2px 5px lime;
+    color: gold;
 }
 
 ul {
     font-size: 150%;
-    font-family: Papyrus;
+    font-family: Papyrus, serif;
 }
+
+.container {
+    font-family: Papyrus, serif;
+    font-size: x-large;
+}
+
 
