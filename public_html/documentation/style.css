@@ -10,8 +10,9 @@ header {
     font-size: xx-large;
     text-align: center;
     color: yellow;
-    text-shadow: 2px 2px 5px gray;
+    text-shadow: 10px 10px 20px white;
 }
+
 body {
     background: url("https://i.natgeofe.com/k/49f3dd21-d3b5-476e-a85e-4c5b34651cd1/Denali-mountain_3x2.jpg") no-repeat center;
     background-size: cover;
@@ -43,5 +44,16 @@ strong {
     font-size: 35px;
 }
 
+footer {
+    background-color: Black;
+    padding: .5em;
+    font-size: xx-large;
+    text-align: center;
+    color: yellow;
+    text-shadow: 2px 2px 8px white;
+}
 
-
+a {
+    color: greenyellow;
+    opacity: 0.6;
+}
