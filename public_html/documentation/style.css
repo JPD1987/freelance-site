@@ -4,20 +4,31 @@ html {
     text-shadow: 4px 4px 10px yellow;
 }
 
+header {
+    background-color: Black;
+    padding: .5em;
+    font-size: xx-large;
+    text-align: center;
+    color: yellow;
+    text-shadow: 2px 2px 5px gray;
+}
+body {
+    background: url("https://i.natgeofe.com/k/49f3dd21-d3b5-476e-a85e-4c5b34651cd1/Denali-mountain_3x2.jpg") no-repeat center;
+    background-size: cover;
+}
 h1 {
     background-color: black;
     width: 18%;
     border-radius: 1em;
     border: .3em ridge goldenrod;
     text-align: center;
-    opacity: 0.5;
+    opacity: 0.8;
     padding-top: .2em;
     text-shadow: 2px 2px 5px lime;
     color: gold;
 }
 
 ul {
-    font-size: 150%;
     font-family: Papyrus, serif;
 }
 
@@ -25,5 +36,12 @@ ul {
     font-family: Papyrus, serif;
     font-size: x-large;
 }
+
+strong {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 35px;
+}
+
 
 
