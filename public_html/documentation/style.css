@@ -58,3 +58,7 @@ a {
     padding: .002em;
 
 }
+
+img {
+    -webkit-filter: grayscale(100%);
+}
