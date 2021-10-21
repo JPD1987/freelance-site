@@ -1,0 +1,15 @@
+html {
+    background-image: url(https://image.shutterstock.com/image-photo/image-homeoffice-interior-wood-desk-260nw-1329245399.jpg);
+    background-size: cover;
+}
+
+body {
+    font-size: xxx-large;
+    font-family: Helvetica, sans-serif;
+    color: black;
+    text-shadow: 5px 5px 10px white;
+}
+
+h3 {
+    text-underline: orange;
+}
