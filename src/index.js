@@ -5,12 +5,13 @@ const Recaptcha = require("express-recaptcha").RecaptchaV2
 const formData = require("form-data")
 const Mailgun = require("mailgun.js")
 const mailgun = new Mailgun(formData)
+require('dotenv').config()
 const {check, validationResult} = require("express-validator")
 const {request, response} = require("express");
 
 const validation = [
     check("name", "A valid name is required.").not().isEmpty().trim().escape(),
-    check("email", "Please provide a valid email.").isEmail(),
+    check("email", "Please provide a valid email").isEmail(),
     check("subject").optional().trim().escape(),
     check("message", "A message of 2000 characters or less is required").trim().escape().isLength({min:1, max:2000})
 ]
@@ -35,36 +36,37 @@ const handlePostRequest = (request, response) => {
 
     if (request.recaptcha.error) {
         return response.send(
-            `<div class='alert alert-danger' role='alert'><strong>Oh Snap</strong>There was a recaptcha error. Please try again</div>`
+            `<div class='alert alert-danger' role='alert'><strong>Oh Snap!</strong>There was a recaptcha error. Please try again</div>`
         )
     }
 
     const errors = validationResult(request)
 
-    if(errors.isEmpty() )
+    if(errors.isEmpty() === false){
         const currentError = errors.array()[0]
-        return response.send(`<div class='alert alert-danger' role='alert'><strong>Oh Snap</strong>There was a recaptcha error. Please try again</div>`)
-        }
+        return response.send(`<div class='alert alert-danger' role='alert'><strong>Oh Snap!</strong>${currentError}</div>`)
+    }
 
-        const {email, subject, name, message} = request.body
+    const {email, subject, name, message} = request.body
 
     const mailgunData = {
-    to: process.env.MAIL_RECIPIENT,
-    from: `${name} <postmaster@${process.env.MAILGUN_DOMAIN}>`,
-    subject: `${email}: ${subject}`,
-    text: message
+        to: process.env.MAIL_RECIPIENT,
+        from: `${name} <postmaster@${process.env.MAILGUN_DOMAIN}>`,
+        subject: `${email}: ${subject}`,
+        text: message
     }
 
     mg.messages.create(process.env.MAILGUN_DOMAIN, mailgunData)
         .then(msg =>
-        response.send(
-           `<div class='alert alert-success' role='alert' >${JSON.stringify(msg)}</div>`
-        ))
+            response.send(
+                `<div class='alert alert-success' role='alert' >${JSON.stringify(msg)}</div>`
+            ))
         .catch(err =>
-        response.send(
-            `<div class='alert alert-danger' role='alert'><strong>Oh Snap</strong>There was a recaptcha error. Please try again</div>`
-        ))
+            response.send(
+                `<div class='alert alert-danger' role='alert'><strong>Oh Snap!</strong>${err}</div>`
+            ))
 
+}
 
 indexRoute.route("/")
     .get(handleGetRequest)
@@ -73,7 +75,7 @@ indexRoute.route("/")
 app.use('/apis', indexRoute)
 
 app.listen(4200, () => {
-    console.log()
+    console.log('Express Successfully Built')
 })
 
 

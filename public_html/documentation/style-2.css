@@ -1,12 +1,108 @@
-.hero {
-    width: 100%;
-    height: 930px;
-    background-image: url("underwater.jpeg");
-    background-size: cover;
-    background-position: center;
+body {
+    background-color: #3DE8FE;
 }
 
-img {
+.hero {
+    width: 100%;
+    height: 55vh;
+    background: url("background.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bubbles img {
+    width: 50px;
+    animation: bubble 7s linear infinite;
+}
+
+.bubbles {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+}
+
+@keyframes bubble {
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+
+        opacity: 1;
+    }
+    70%{
+
+        opacity: 1;
+    }
+    100%{
+         transform: translateY(-80vh);
+         opacity: 0;
+     }
+}
+
+.bubbles img:nth-child(1){
+    animation-delay: 2s;
+}
+.bubbles img:nth-child(2){
+    animation-delay: 1s;
+}
+.bubbles img:nth-child(3){
+    animation-delay: 3s;
+}
+.bubbles img:nth-child(4){
+    animation-delay: 4s;
+}
+.bubbles img:nth-child(5){
+    animation-delay: 3s;
+}
+.bubbles img:nth-child(6){
+    animation-delay: 6s;
+}
+.bubbles img:nth-child(7){
+    animation-delay: 7s;
+}
+
+.NEW {
+    position: absolute;
+    margin: 0;
+    font-size: 4em;
+    font-weight: 900;
+    color: darkolivegreen;
+    z-index: 1;
+    overflow: hidden;
+    bottom: 20%;
+    top: 20%;
+}
+
+.NEW:before {
+    content: '';
+    position: absolute;
+    left: 120;
+    animation: animate 5.5s linear forwards infinite;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        left: 110%;
+    }
+    100%
+    {
+        left: -20%;
+    }
+}
+
+.NEW span {
+    color: #ff022c;
+}
+
+#boat {
     height: 550px;
     width: 500px;
     padding-top: 2em;
@@ -15,33 +111,271 @@ img {
 }
 
 h1 {
-    font-size: xxx-large;
     text-align: center;
-    padding-top: 1%;
+    animation: animate 3s linear infinite;
+    /*animation-delay: calc(0.1s * var());*/
+}
+@keyframes animate
+{
+ 0%
+ {
+     color: white;
+     filter: blur(2px);
+     text-shadow: 0 0 10px #00b3ff;
+     :0 0 20px #00b3ff
+     0 0 40px #00b3ff
+     0 0 80px #00b3ff
+     0 0 120px #00b3ff
+     0 0 200px #00b3ff
+     0 0 300px #00b3ff
+     0 0 400px #00b3ff
+ }
+30%, 70%
+{
+    color: white;
+    filter: blur(2px) hue-rotate(360deg);
+    text-shadow: 0 0 10px #00b3ff;
+    :0 0 20px #00b3ff
+    0 0 40px #00b3ff
+    0 0 80px #00b3ff
+    0 0 120px #00b3ff
+    0 0 200px #00b3ff
+    0 0 300px #00b3ff
+    0 0 400px #00b3ff
+}
+    100%
+    {
+        color: transparent;
+        box-shadow: none;
+        filter: blur(2px) hue-rotate(360deg);
+    }
+}
+
+.WD-WORD {
+    font-size: 25px;
+}
+
+.WD {
+    text-align: center;
+    font-style: 38px;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        color: white;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff;
+        :0 0 20px #00b3ff
+        0 0 40px #00b3ff
+        0 0 80px #00b3ff
+        0 0 120px #00b3ff
+        0 0 200px #00b3ff
+        0 0 300px #00b3ff
+        0 0 400px #00b3ff
+    }
+    30%, 70%
+    {
+        color: white;
+        filter: blur(2px) hue-rotate(360deg);
+        text-shadow: 0 0 10px #00b3ff;
+        :0 0 20px #00b3ff
+        0 0 40px #00b3ff
+        0 0 80px #00b3ff
+        0 0 120px #00b3ff
+        0 0 200px #00b3ff
+        0 0 300px #00b3ff
+        0 0 400px #00b3ff
+    }
+    100%
+    {
+        color: transparent;
+        box-shadow: none;
+        filter: blur(2px) hue-rotate(360deg);
+    }
+}
+
+.FSE {
+    font-size: 25px;
+}
+
+.FSD {
+    text-align: center;
+    font-style: 38px;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        color: white;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff;
+        :0 0 20px #00b3ff
+        0 0 40px #00b3ff
+        0 0 80px #00b3ff
+        0 0 120px #00b3ff
+        0 0 200px #00b3ff
+        0 0 300px #00b3ff
+        0 0 400px #00b3ff
+    }
+    30%, 70%
+    {
+        color: white;
+        filter: blur(2px) hue-rotate(360deg);
+        text-shadow: 0 0 10px #00b3ff;
+        :0 0 20px #00b3ff
+        0 0 40px #00b3ff
+        0 0 80px #00b3ff
+        0 0 120px #00b3ff
+        0 0 200px #00b3ff
+        0 0 300px #00b3ff
+        0 0 400px #00b3ff
+    }
+    100%
+    {
+        color: transparent;
+        box-shadow: none;
+        filter: blur(2px) hue-rotate(360deg);
+    }
+}
+
+.FRDE {
+    font-size: 25px;
+}
+
+.FRE {
+    text-align: center;
+    font-style: 38px;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        color: white;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff;
+        :0 0 20px #00b3ff
+        0 0 40px #00b3ff
+        0 0 80px #00b3ff
+        0 0 120px #00b3ff
+        0 0 200px #00b3ff
+        0 0 300px #00b3ff
+        0 0 400px #00b3ff
+    }
+    30%, 70%
+    {
+        color: white;
+        filter: blur(2px) hue-rotate(360deg);
+        text-shadow: 0 0 10px #00b3ff;
+        :0 0 20px #00b3ff
+        0 0 40px #00b3ff
+        0 0 80px #00b3ff
+        0 0 120px #00b3ff
+        0 0 200px #00b3ff
+        0 0 300px #00b3ff
+        0 0 400px #00b3ff
+    }
+    100%
+    {
+        color: transparent;
+        box-shadow: none;
+        filter: blur(2px) hue-rotate(360deg);
+    }
+}
+
+.ABME {
+    font-size: 38px;
     color: black;
 }
 
-p {
-    font-size: 21px;
-    color: black;
+footer p{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
-#floatingInput-1 {
-    background-color: grey;
+footer {
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
 }
 
-/*#floatingInput-2 {*/
-/*    background-color: grey;*/
-/*}*/
-
-#floatingPassword-1 {
-    background-color: grey;
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("wave.PNG");
+    background-size: 1000px 100px;
 }
 
-#floatingPassword-2 {
-    background-color: grey;
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
 }
 
-#floatingTextarea2 {
-    background-color: grey;
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10;
+    animation: animateWave_02 4s linear infinite;
 }
+
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave
+{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0;
+    }
+}
+
+@keyframes animateWave_02
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
