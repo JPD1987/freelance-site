@@ -12,6 +12,16 @@ body {
     overflow: hidden;
 }
 
+.word {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    right: 36%;
+    font-size: 3em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+}
+
 .bubbles img {
     width: 50px;
     animation: bubble 7s linear infinite;
@@ -102,7 +112,7 @@ body {
     color: #ff022c;
 }
 
-#boat {
+#JPD {
     height: 550px;
     width: 500px;
     padding-top: 2em;
